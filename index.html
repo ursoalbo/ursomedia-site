@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URSO Media Productions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f1013;
+            --card-bg: rgba(30, 33, 37, 0.6);
+            --accent-gradient: linear-gradient(135deg, #ff9f43, #ff5252);
+            --accent-color: #ff9f43;
+            --text-color: #ffffff;
+            --text-muted: #a0a5b0;
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background διακοσμητικά στοιχεία */
+        .bg-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 159, 67, 0.15) 0%, rgba(0,0,0,0) 70%);
+            top: -100px;
+            right: -100px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(15, 16, 19, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .logo img {
+            height: 42px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Hero */
+        #hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            max-width: 900px;
+            font-weight: 800;
+            background: linear-gradient(180deg, #ffffff 0%, #a0a5b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 45px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-gradient);
+            color: #0f1013;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 159, 67, 0.5);
+        }
+
+        /* Tilted Marquee (Μαρκίζα σε κλίση) */
+        .marquee-wrapper {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            padding: 35px 0;
+            background: #131519;
+            transform: rotate(-2.5deg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            gap: 70px;
+            animation: scroll 35s linear infinite;
+        }
+
+        .marquee-content i {
+            font-size: 2.3rem;
+            color: rgba(255, 255, 255, 0.12);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .marquee-content i:hover {
+            color: var(--accent-color);
+            transform: scale(1.15) rotate(2.5deg);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Services Grid */
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 159, 67, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* About */
+        .content-block {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-block p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .direct-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .action-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            min-width: 280px;
+            justify-content: center;
+        }
+
+        .action-card i {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+        }
+
+        .action-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 159, 67, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2.4rem; }
+            #hero p { font-size: 1.1rem; }
+            nav ul { display: none; }
+            .direct-actions { flex-direction: column; align-items: center; }
+            .action-card { width: 100%; max-width: 340px; }
+            .marquee-wrapper { transform: rotate(-1.5deg); padding: 25px 0; }
+            .marquee-content { gap: 45px; }
+            .marquee-content i { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <img src="logo.png" alt="UMP Logo">
+                <span>URSO MEDIA PRODUCTIONS</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Τι Κάνουμε</a></li>
+                    <li><a href="#about">Ποιοι Είμαστε</a></li>
+                    <li><a href="#contact">Επικοινωνία</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>Μετατρέπουμε τους θεατές της επιχείρησής σας σε πελάτες.</h1>
+        <p>Αναλαμβάνουμε την πλήρη παραγωγή περιεχομένου για τα Social Media σας: από το σενάριο και τη μαγνητοσκόπηση, μέχρι το μοντάζ και τη διαχείριση.</p>
+        <a href="#contact" class="btn">Ξεκινήστε Εδώ <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-threads"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-snapchat"></i>
+            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-vimeo-v"></i>
+            
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-threads"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-snapchat"></i>
+            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-vimeo-v"></i>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="bg-glow" style="bottom: -100px; left: -100px; top: auto; right: auto;"></div>
+        <h2 class="section-title">Τι Κάνουμε</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                <h3>Σενάριο & Στρατηγική</h3>
+                <p>Γράφουμε κείμενα προσαρμοσμένα για τους αλγορίθμους των TikTok, Reels και Shorts, εστιάζοντας στη διατήρηση της προσοχής (retention).</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-video"></i></div>
+                <h3>Παραγωγή</h3>
+                <p>Αναλαμβάνουμε το τεχνικό κομμάτι της βιντεοσκόπησης στον χώρο σας με επαγγελματικό εξοπλισμό ήχου και εικόνας.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                <h3>Video Editing</h3>
+                <p>Δημιουργούμε δυναμικά βίντεο με γρήγορο ρυθμό, υπότιτλους και sound design, βελτιστοποιημένα για προβολή από κινητά τηλέφωνα.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Διαχείριση</h3>
+                <p>Διαχειριζόμαστε τη δημοσίευση, τους τίτλους, τα hashtags και την αλληλεπίδραση σε Instagram, TikTok, YouTube και Facebook.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Ποιοι Είμαστε</h2>
+        <div class="content-block">
+            <p>Η URSO Media Productions δημιουργήθηκε για να καλύψει το κενό μεταξύ της τεχνικής παραγωγής βίντεο και της επιχειρηματικής αποτελεσματικότητας.</p>
+            <p>Δεν φτιάχνουμε απλώς "όμορφα βίντεο". Σχεδιάζουμε περιεχόμενο που βασίζεται στα δεδομένα των αλγορίθμων, με σκοπό να φέρει οργανική ανάπτυξη και πραγματικούς πελάτες στην επιχείρησή σας.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Επικοινωνία</h2>
+        <div class="content-block">
+            <p>Είστε έτοιμοι να αναβαθμίσετε την ψηφιακή παρουσία της επιχείρησής σας; Επικοινωνήστε μαζί μας άμεσα.</p>
+            
+            <div class="contact-container">
+                <div class="direct-actions">
+                    <a href="mailto:theursoalbo@gmail.com" class="action-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>theursoalbo@gmail.com</span>
+                    </a>
+                    <a href="tel:+306944557570" class="action-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+30 694 455 7570</span>
+                    </a>
+                    <a href="https://www.instagram.com/umpgr/" target="_blank" class="action-card">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@umpgr</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 URSO Media Productions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
