@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URSO Media Productions — Social Media Βίντεο που Φέρνουν Πελάτες</title>
-    <meta name="description" content="Πλήρης παραγωγή περιεχομένου για social media: σενάριο, βιντεοσκόπηση, μοντάζ, διαχείριση. Μετατρέπουμε τους θεατές σας σε πελάτες.">
+    <title>URSO Media Productions | Ολοκληρωμένη Οπτικοακουστική Παραγωγή</title>
+    <meta name="description" content="Ολοκληρωμένη full-stack οπτικοακουστική παραγωγή: σενάριο, βιντεοσκόπηση, ήχος, σκηνοθεσία, μοντάζ, κάλυψη εκδηλώσεων και live streaming.">
 
-    <!-- Open Graph / Twitter (#5) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="URSO Media Productions">
-    <meta property="og:description" content="Μετατρέπουμε τους θεατές της επιχείρησής σας σε πελάτες. Πλήρης παραγωγή περιεχομένου για social media.">
+    <meta property="og:description" content="Ολοκληρωμένη οπτικοακουστική παραγωγή. Σενάριο, κάλυψη εκδηλώσεων, live streaming, σκηνοθεσία και post-production.">
     <meta property="og:image" content="apple-touch-icon.png">
     <meta property="og:locale" content="el_GR">
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="URSO Media Productions">
-    <meta name="twitter:description" content="Social media video production that turns viewers into customers.">
+    <meta name="twitter:description" content="Full-stack audiovisual production. Scripts, filming, sound, live streaming, and editing.">
 
-    <!-- Favicon (#20) -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -174,7 +172,7 @@
             overflow: visible;
         }
 
-        /* Animated hero backdrop (#14): drifting gradient orbs */
+        /* Animated hero backdrop (#14) */
         .hero-bg {
             position: absolute;
             inset: -10% -20%;
@@ -272,7 +270,6 @@
             width: max-content;
             gap: 70px;
             animation: scroll 35s linear infinite;
-            /* Pause when scrolled far offscreen (toggled by JS, #6) */
         }
         .marquee-wrapper.paused .marquee-content { animation-play-state: paused; }
 
@@ -350,7 +347,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Card icon with tinted circle backdrop (#17) */
+        /* Card icon */
         .card-icon {
             width: 58px;
             height: 58px;
@@ -412,7 +409,7 @@
         /* Process strip (#9) */
         .process-strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             counter-reset: step;
         }
@@ -711,8 +708,8 @@
             <div class="hero-orb orb-1"></div>
             <div class="hero-orb orb-2"></div>
         </div>
-        <h1 data-i18n="hero_h1">Μετατρέπουμε τους θεατές της επιχείρησής σας σε πελάτες.</h1>
-        <p data-i18n="hero_p">Αναλαμβάνουμε την πλήρη παραγωγή περιεχομένου για τα Social Media σας: από το σενάριο και τη μαγνητοσκόπηση, μέχρι το μοντάζ και τη διαχείριση.</p>
+        <h1 data-i18n="hero_h1">Ολοκληρωμένες Υπηρεσίες Οπτικοακουστικής Παραγωγής.</h1>
+        <p data-i18n="hero_p">Αναλαμβάνουμε κάθε στάδιο παραγωγής. Από τη σύλληψη της ιδέας, το σενάριο και τη σκηνοθεσία, μέχρι την κάλυψη της εκδήλωσης, το μοντάζ και τον σχεδιασμό ήχου.</p>
         <a href="#contact" class="btn"><span data-i18n="hero_btn">Ξεκινήστε Εδώ</span> <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
     </section>
 
@@ -722,52 +719,56 @@
 
     <section id="services">
         <h2 class="section-title reveal" data-i18n="services_title">Τι Κάνουμε</h2>
-        <p class="section-subtitle reveal" data-i18n="services_sub">Από την ιδέα μέχρι τη δημοσίευση — αναλαμβάνουμε τα πάντα.</p>
+        <p class="section-subtitle reveal" data-i18n="services_sub">Από το πρώτο draft του σεναρίου μέχρι το τελικό export, αναλαμβάνουμε τα πάντα.</p>
         <div class="grid">
             <div class="card reveal">
                 <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-                <h3 data-i18n="svc1_h">Σενάριο & Στρατηγική</h3>
-                <p data-i18n="svc1_p">Γράφουμε κείμενα προσαρμοσμένα για τους αλγορίθμους των TikTok, Reels και Shorts, εστιάζοντας στη διατήρηση της προσοχής (retention).</p>
+                <h3 data-i18n="svc1_h">Σενάριο & Σκηνοθεσία</h3>
+                <p data-i18n="svc1_p">Αναπτύσσουμε concepts, γράφουμε σενάρια και αναλαμβάνουμε την καλλιτεχνική διεύθυνση για εταιρικά project, εκδηλώσεις και digital καμπάνιες.</p>
             </div>
             <div class="card reveal">
                 <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
-                <h3 data-i18n="svc2_h">Παραγωγή</h3>
-                <p data-i18n="svc2_p">Αναλαμβάνουμε το τεχνικό κομμάτι της βιντεοσκόπησης στον χώρο σας με επαγγελματικό εξοπλισμό ήχου και εικόνας.</p>
+                <h3 data-i18n="svc2_h">Κάλυψη Εκδηλώσεων & Live Streaming</h3>
+                <p data-i18n="svc2_p">Πλήρης τεχνική κάλυψη για live events και εταιρικές εκδηλώσεις. Παρέχουμε ζωντανή σκηνοθεσία και live streaming σε όλες τις πλατφόρμες με επαγγελματικό εξοπλισμό.</p>
             </div>
             <div class="card reveal">
                 <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M20.2 6 4 4.8v3.2M4 19.2 20.2 18M4.8 4.8 8 18m0 0 4.8-6L8 18m9.5-11.5c.6-.7 1.6-1 2.5-.6 1.2.4 1.9 1.6 1.6 2.8-.3 1.3-1.6 2-2.8 1.7-1.1-.3-1.8-1.4-1.6-2.5.1-.5.4-1 .8-1.3Z"/></svg></div>
-                <h3 data-i18n="svc3_h">Video Editing</h3>
-                <p data-i18n="svc3_p">Δημιουργούμε δυναμικά βίντεο με γρήγορο ρυθμό, υπότιτλους και sound design, βελτιστοποιημένα για προβολή από κινητά τηλέφωνα.</p>
+                <h3 data-i18n="svc3_h">Παραγωγή</h3>
+                <p data-i18n="svc3_p">Εκτελούμε υψηλών προδιαγραφών βιντεοσκόπηση και ηχογράφηση στον χώρο σας. Εξασφαλίζουμε άρτιο τεχνικό αποτέλεσμα σε κάθε συνθήκη.</p>
             </div>
             <div class="card reveal">
                 <div class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
-                <h3 data-i18n="svc4_h">Διαχείριση</h3>
-                <p data-i18n="svc4_p">Διαχειριζόμαστε τη δημοσίευση, τους τίτλους, τα hashtags και την αλληλεπίδραση σε Instagram, TikTok, YouTube και Facebook.</p>
+                <h3 data-i18n="svc4_h">Post-Production</h3>
+                <p data-i18n="svc4_p">Ολοκληρωμένο video editing, color grading, sound design και μίξη ήχου. Παραδίδουμε το υλικό βελτιστοποιημένο για κάθε χρήση.</p>
             </div>
         </div>
 
-        <!-- Process strip (#9) -->
-        <h2 class="section-title reveal" style="margin-top: 110px;" data-i18n="process_title">Πώς Δουλεύουμε</h2>
+        <h2 class="section-title reveal" style="margin-top: 110px;" data-i18n="process_title">Η Διαδικασία</h2>
         <div class="process-strip" style="margin-top: 60px;">
             <div class="step-card reveal">
                 <div class="step-num">1</div>
-                <h4 data-i18n="step1_h">Γνωριμία</h4>
-                <p data-i18n="step1_p">Εντοπίζουμε μαζί τον στόχο της επιχείρησής σας και το κοινό που θέλετε να προσεγγίσετε.</p>
+                <h4 data-i18n="step1_h">Pre-Production</h4>
+                <p data-i18n="step1_p">Συζητάμε τις ανάγκες σας, γράφουμε το σενάριο, επιλέγουμε τους κατάλληλους χώρους (venues) και οργανώνουμε το συνεργείο.</p>
             </div>
             <div class="step-card reveal">
                 <div class="step-num">2</div>
-                <h4 data-i18n="step2_h">Σενάριο & Σχέδιο</h4>
-                <p data-i18n="step2_p">Σχεδιάζουμε τα βίντεο και το πρόγραμμα δημοσιεύσεων με βάση τα δεδομένα των αλγορίθμων.</p>
+                <h4 data-i18n="step2_h">Production</h4>
+                <p data-i18n="step2_p">Σκηνοθετούμε, στήνουμε τον εξοπλισμό ήχου και εικόνας και εκτελούμε τα γυρίσματα ή την κάλυψη της εκδήλωσης.</p>
             </div>
             <div class="step-card reveal">
                 <div class="step-num">3</div>
-                <h4 data-i18n="step3_h">Παραγωγή & Μοντάζ</h4>
-                <p data-i18n="step3_p">Σας επισκεπτόμαστε, γυρίζουμε και μοντάρουμε επαγγελματικό περιεχόμενο έτοιμο για κάθε πλατφόρμα.</p>
+                <h4 data-i18n="step3_h">Ζωντανή Παραγωγή & Streaming</h4>
+                <p data-i18n="step3_p">Εκτελούμε τη ζωντανή σκηνοθεσία της εκδήλωσής σας και μεταδίδουμε ταυτόχρονα (live streaming) σε όλες τις ψηφιακές πλατφόρμες.</p>
             </div>
             <div class="step-card reveal">
                 <div class="step-num">4</div>
-                <h4 data-i18n="step4_h">Δημοσίευση & Ανάπτυξη</h4>
-                <p data-i18n="step4_p">Δημοσιεύουμε, παρακολουθούμε τα αποτελέσματα και βελτιώνουμε συνεχώς τη στρατηγική.</p>
+                <h4 data-i18n="step4_h">Post-Production</h4>
+                <p data-i18n="step4_p">Μοντάρουμε το υλικό, κάνουμε color grading και δημιουργούμε το sound design για κινηματογραφική αίσθηση.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-num">5</div>
+                <h4 data-i18n="step5_h">Παράδοση</h4>
+                <p data-i18n="step5_p">Εξάγουμε και παραδίδουμε τα τελικά αρχεία στα σωστά format, έτοιμα για προβολή, τηλεόραση ή διαδίκτυο.</p>
             </div>
         </div>
     </section>
@@ -775,90 +776,87 @@
     <section id="about">
         <h2 class="section-title reveal" data-i18n="about_title">Ποιοι Είμαστε</h2>
         <div class="content-block">
-            <p class="reveal" data-i18n="about_p1">Η URSO Media Productions δημιουργήθηκε για να καλύψει το κενό μεταξύ της τεχνικής παραγωγής βίντεο και της επιχειρηματικής αποτελεσματικότητας.</p>
-            <p class="reveal" data-i18n="about_p2">Σχεδιάζουμε περιεχόμενο που βασίζεται στα δεδομένα των αλγορίθμων, με σκοπό να φέρει οργανική ανάπτυξη και πραγματικούς πελάτες στην επιχείρησή σας.</p>
+            <p class="reveal" data-i18n="about_p1">Η URSO Media Productions είναι μια full-stack εταιρεία οπτικοακουστικής παραγωγής, σχεδιασμένη να καλύπτει κάθε πτυχή ενός project.</p>
+            <p class="reveal" data-i18n="about_p2">Από την πολυκάμερη κάλυψη live events και το ζωντανό streaming μέχρι τον σχεδιασμό διαφημιστικών σποτ, έχουμε τον πλήρη έλεγχο εικόνας και ήχου για να παραδώσουμε κορυφαία ποιότητα.</p>
         </div>
 
-        <!-- Stats row (#18) -->
         <div class="stats-row">
             <div class="stat-block reveal">
                 <div class="stat-number" data-count="250" data-suffix="+">0+</div>
-                <div class="stat-label" data-i18n="stat_videos">Βίντεο</div>
+                <div class="stat-label" data-i18n="stat_videos">Έργα</div>
             </div>
             <div class="stat-block reveal">
-                <div class="stat-number" data-count="155" data-suffix="M+">0M+</div>
+                <div class="stat-number" data-count="150" data-suffix="M+">0M+</div>
                 <div class="stat-label" data-i18n="stat_views">Προβολές</div>
             </div>
             <div class="stat-block reveal">
-                <div class="stat-number" data-count="4" data-suffix="">0</div>
-                <div class="stat-label" data-i18n="stat_platforms">Πλατφόρμες Διαχείρισης</div>
+                <div class="stat-number" data-count="50" data-suffix="+">0</div>
+                <div class="stat-label" data-i18n="stat_platforms">Live Παραγωγές</div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials (#13) -->
     <section id="testimonials">
         <h2 class="section-title reveal" data-i18n="testi_title">Τι Λένε για Εμάς</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card reveal">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text" data-i18n="testi1_text">«Σε τρεις μήνες το κατάστημα μας είδε την μεγαλύτερη αύξηση επισκεψιμότητας από τότε που άνοιξε. Τα βίντεο είναι επαγγελματικά και πάντα στην ώρα τους.»</p>
+                <p class="testimonial-text" data-i18n="testi1_text">«Το εταιρικό μας βίντεο παραδόθηκε στην ώρα του. Η διαδικασία από το σενάριο μέχρι το τελικό μοντάζ κύλησε χωρίς κανένα πρόβλημα.»</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">ΓΠ</div>
                     <div>
                         <div class="testimonial-author-name" data-i18n="testi1_name">Γιώργος Παπαδόπουλος</div>
-                        <div class="testimonial-author-role" data-i18n="testi1_role">Ιδιοκτήτης καφέ, Αθήνα</div>
+                        <div class="testimonial-author-role" data-i18n="testi1_role">Ιδιοκτήτης επιχείρησης, Αθήνα</div>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card reveal">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text" data-i18n="testi2_text">«Δεν καταλάβαινα τίποτα από TikTok — τώρα το μαγαζί μου έχει φανεί σε βίντεο με χιλιάδες προβολές. Η συνεργασία είναι άψογη και η διαδικασία απλή.»</p>
+                <p class="testimonial-text" data-i18n="testi2_text">«Η τεχνική κάλυψη και το live streaming στην εταιρική μας εκδήλωση ήταν άψογα. Εξαιρετική ποιότητα ήχου, άμεση διαχείριση φωτισμού και το τελικό υλικό παραδόθηκε άμεσα.»</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">ΜΚ</div>
                     <div>
                         <div class="testimonial-author-name" data-i18n="testi2_name">Μαρία Κωνσταντίνου</div>
-                        <div class="testimonial-author-role" data-i18n="testi2_role">Ιδρύτρια e-shop, Αθήνα</div>
+                        <div class="testimonial-author-role" data-i18n="testi2_role">Υπεύθυνη Εταιρικών Εκδηλώσεων</div>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card reveal">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text" data-i18n="testi3_text">«Αυτό που εκτίμησα περισσότερο είναι ότι δεν μας ενδιαφέρει μόνο τα likes — μας ενδιαφέρει να φέρουμε πελάτες. Και το πετυχαίνουν.»</p>
+                <p class="testimonial-text" data-i18n="testi3_text">«Αυτό που εκτιμήσαμε περισσότερο είναι η προσοχή στη λεπτομέρεια. Το sound design ανέβασε επίπεδο την παραγωγή μας.»</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">ΔΒ</div>
                     <div>
                         <div class="testimonial-author-name" data-i18n="testi3_name">Δημήτρης Βασιλείου</div>
-                        <div class="testimonial-author-role" data-i18n="testi3_role">Διαχειριστής γυμναστηρίου, Αθήνα</div>
+                        <div class="testimonial-author-role" data-i18n="testi3_role">Marketing Director</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ (#10) -->
     <section id="faq">
         <h2 class="section-title reveal" data-i18n="faq_title">Συχνές Ερωτήσεις</h2>
         <div class="faq-list">
             <div class="faq-item reveal">
-                <button class="faq-q"><span data-i18n="faq1_q">Πόσο κοστίζει μια συνεργασία;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq1_a">Κάθε επιχείρηση είναι διαφορετική. Το κόστος εξαρτάται από τον αριθμό των βίντεο και των πλατφορμών που θέλετε να καλύψουμε. Επικοινωνήστε μαζί μας για προσφορά προσαρμοσμένη στις ανάγκες σας.</div></div>
+                <button class="faq-q"><span data-i18n="faq1_q">Πόσο κοστίζει μια παραγωγή;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq1_a">Το κόστος διαμορφώνεται βάσει των απαιτήσεων του κάθε project. Εξαρτάται από τον εξοπλισμό, την ενοικίαση χώρων, τις ημέρες γυρισμάτων και τις ανάγκες του post-production. Επικοινωνήστε μαζί μας για ακριβή προσφορά.</div></div>
             </div>
             <div class="faq-item reveal">
                 <button class="faq-q"><span data-i18n="faq2_q">Σε ποιες περιοχές δραστηριοποιείστε;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq2_a">Δραστηριοποιούμαστε στην Αθήνα. Για τις λήψεις μεταφερόμαστε στον χώρο σας, ενώ ο σχεδιασμός, το μοντάζ και η διαχείριση γίνονται εξ αποστάσεως.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq2_a">Δραστηριοποιούμαστε στην Αθήνα, αναλαμβάνοντας την τεχνική κάλυψη σε εκθεσιακούς χώρους, εταιρικά γραφεία ή εξωτερικά venues.</div></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-q"><span data-i18n="faq3_q">Πόσους νέους πελάτες θα φέρετε;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq3_a">Δεν μπορούμε να εγγυηθούμε συγκεκριμένους αριθμούς — κανείς ειλικρινής επαγγελματίας δεν μπορεί. Αυτό που εγγυόμαστε είναι σταθερή, ποιοτική παραγωγή και στρατηγική βασισμένη σε δεδομένα που μεγιστοποιεί τις πιθανότητες οργανικής ανάπτυξης.</div></div>
+                <button class="faq-q"><span data-i18n="faq3_q">Αναλαμβάνετε μόνο τη βιντεοσκόπηση;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq3_a">Καλύπτουμε όλο το φάσμα (full-stack). Από ένα απλό promo βίντεο μέχρι πολυκάμερη κάλυψη εκδηλώσεων με ζωντανή σκηνοθεσία, live streaming σε όλες τις πλατφόρμες, σχεδιασμό φωτισμού και τελικό μοντάζ.</div></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-q"><span data-i18n="faq4_q">Χρειάζομαι να έχω λογαριασμούς στα social media;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq4_a">Όχι απαραίτητα. Αν δεν έχετε παρουσία, αναλαμβάνουμε και τη δημιουργία και τη ρύθμιση των λογαριασμών σας από την αρχή.</div></div>
+                <button class="faq-q"><span data-i18n="faq4_q">Διαθέτετε τον απαραίτητο εξοπλισμό;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq4_a">Ναι. Διαθέτουμε επαγγελματικές κάμερες, ασύρματα συστήματα ήχου, φώτα και εργαλεία μοντάζ για να καλύψουμε πλήρως τις ανάγκες του set.</div></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-q"><span data-i18n="faq5_q">Υπάρχει ελάχιστη διάρκεια συνεργασίας;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq5_a">Προτείνουμε τουλάχιστον τρίμηνη συνεργασία, γιατί οι αλγόριθμοι χρειάζονται χρόνο να ανταποδώσουν. Ωστόσο, μπορούμε να συμφωνήσουμε ευέλικτους όρους ανά περίπτωση.</div></div>
+                <button class="faq-q"><span data-i18n="faq5_q">Πόσος χρόνος χρειάζεται για την παράδοση;</span><svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq5_a">Ο χρόνος παράδοσης καθορίζεται στο στάδιο του pre-production. Εξαρτάται από τον όγκο του υλικού και την πολυπλοκότητα του video editing και του color grading.</div></div>
             </div>
         </div>
     </section>
@@ -866,7 +864,7 @@
     <section id="contact">
         <h2 class="section-title reveal" data-i18n="contact_title">Επικοινωνία</h2>
         <div class="content-block">
-            <p class="reveal" data-i18n="contact_p">Είστε έτοιμοι να αναβαθμίσετε την ψηφιακή παρουσία της επιχείρησής σας; Επικοινωνήστε μαζί μας άμεσα.</p>
+            <p class="reveal" data-i18n="contact_p">Είστε έτοιμοι να οργανώσουμε την επόμενη παραγωγή σας; Επικοινωνήστε μαζί μας άμεσα.</p>
 
             <div class="contact-container">
                 <div class="direct-actions">
@@ -906,7 +904,6 @@
         <p>&copy; <span id="year">2026</span> URSO Media Productions. <span data-i18n="footer_rights">All rights reserved.</span></p>
     </footer>
 
-    <!-- Sticky mobile contact bar (#12) -->
     <div class="mobile-contact-bar">
         <a href="#contact" class="primary-link"><span data-i18n="mobile_cta">Επικοινωνία</span></a>
         <a href="https://wa.me/306944557570" target="_blank" rel="noopener" class="secondary-link">WhatsApp</a>
@@ -930,7 +927,7 @@
             ['Reddit', 'M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-6.994 4.87-3.865 0-6.994-2.176-6.994-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12.3c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z'],
             ['Discord', 'M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z'],
             ['Vimeo', 'M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881L5.3228 11.465C4.6035 8.878 3.8345 7.584 3.0155 7.584c-.179 0-.806.378-1.8805 1.132L0 7.197c1.1855-1.0439 2.351-2.0839 3.5005-3.1279C5.0795 2.7012 6.2665 1.9853 7.0555 1.9103c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.793 4.789.977 5.5069.542 2.466 1.136 3.699 1.776 3.699.501 0 1.296-1.007 2.337-2.994 1.04-1.987 1.596-3.499 1.67-4.5503.15-1.72-.498-2.581-1.914-2.581-.68 0-1.4.156-2.115.467 1.406-4.603 4.09-6.8395 8.055-6.7105 2.939.0865 4.325 1.9935 4.187 5.7315z'],
-            ['Instagram', ''], // duplicate filler handled below
+            ['Instagram', ''], 
             ['TikTok', ''],
             ['YouTube', '']
         ];
@@ -964,71 +961,72 @@
 
         const I18N = {
             en: {
-                title: "URSO Media Productions — Social Media Videos That Bring Customers",
-                meta_desc: "Full-cycle social media content production: script, filming, editing, management. We turn your viewers into customers.",
+                title: "URSO Media Productions | Full-Stack Audiovisual Production",
+                meta_desc: "Comprehensive full-stack audiovisual production: scripts, filming, sound, directing, editing, event coverage, and live streaming.",
                 nav_services: "What We Do",
                 nav_about: "Who We Are",
                 nav_contact: "Contact",
-                hero_h1: "We turn your business's viewers into customers.",
-                hero_p: "We handle the complete production of your social media content: from script and filming to editing and management.",
+                hero_h1: "Comprehensive Audiovisual Production Services.",
+                hero_p: "We handle every stage of production. From concept, scriptwriting and directing, to event coverage, editing, and sound design.",
                 hero_btn: "Get Started",
                 services_title: "What We Do",
-                services_sub: "From idea to publication — we handle everything.",
-                svc1_h: "Script & Strategy",
-                svc1_p: "We write copy tailored for the TikTok, Reels and Shorts algorithms, focused on retention.",
-                svc2_h: "Production",
-                svc2_p: "We handle the technical side of on-site video production with professional audio and visual equipment.",
-                svc3_h: "Video Editing",
-                svc3_p: "We create dynamic videos with fast pacing, subtitles and sound design, optimized for mobile viewing.",
-                svc4_h: "Management",
-                svc4_p: "We manage publishing, titles, hashtags and engagement across Instagram, TikTok, YouTube and Facebook.",
-                process_title: "How We Work",
-                step1_h: "Discovery",
-                step1_p: "Together we identify your business's goal and the audience you want to reach.",
-                step2_h: "Script & Plan",
-                step2_p: "We design the videos and publishing schedule based on algorithm data.",
-                step3_h: "Production & Editing",
-                step3_p: "We visit you, film and edit professional content ready for every platform.",
-                step4_h: "Publish & Grow",
-                step4_p: "We publish, monitor results and continuously refine the strategy.",
+                services_sub: "From the first script draft to the final export, we handle everything.",
+                svc1_h: "Script & Directing",
+                svc1_p: "We develop concepts, write scripts, and handle art direction for corporate projects, events, and digital campaigns.",
+                svc2_h: "Event Coverage & Live Streaming",
+                svc2_p: "Full technical coverage for live events and corporate functions. We provide live directing and streaming across all platforms with professional equipment.",
+                svc3_h: "Production",
+                svc3_p: "We execute high-end video and audio recording at your location. We guarantee flawless technical results on set.",
+                svc4_h: "Post-Production",
+                svc4_p: "Complete video editing, color grading, sound design, and audio mixing. We deliver footage optimized for any use.",
+                process_title: "Our Process",
+                step1_h: "Pre-Production",
+                step1_p: "We discuss your needs, write the script, select appropriate venues, and organize the crew.",
+                step2_h: "Production",
+                step2_p: "We direct, set up audio and visual equipment, and execute filming or event coverage.",
+                step3_h: "Live Event & Streaming",
+                step3_p: "We execute the live directing of your event and broadcast simultaneously (live stream) to all digital platforms.",
+                step4_h: "Post-Production",
+                step4_p: "We edit the footage, color grade, and create sound design for a cinematic feel.",
+                step5_h: "Delivery",
+                step5_p: "We export and deliver final files in the correct formats, ready for screening, broadcast, or web.",
                 about_title: "Who We Are",
-                about_p1: "URSO Media Productions was created to bridge the gap between technical video production and business effectiveness.",
-                about_p2: "We design content based on algorithm data, aiming to bring organic growth and real customers to your business.",
-                stat_videos: "Videos",
+                about_p1: "URSO Media Productions is a full-stack audiovisual production company, designed to cover every aspect of a project.",
+                about_p2: "From multi-camera live event coverage and streaming to designing commercial spots, we have complete control over image and sound to deliver top-tier quality.",
+                stat_videos: "Projects",
                 stat_views: "Views",
-                stat_platforms: "Platforms Managed",
+                stat_platforms: "Live Productions",
                 testi_title: "What People Say",
-                testi1_text: "\u201CWithin three months our store saw its biggest foot-traffic increase since opening. The videos are professional and always on time.\u201D",
+                testi1_text: "\u201COur corporate video was delivered on time. The process from script to final edit ran without a single issue.\u201D",
                 testi1_name: "Giorgos Papadopoulos",
-                testi1_role: "Coffee shop owner, Athens",
-                testi2_text: "\u201CI knew nothing about TikTok — now my shop has been seen in videos with thousands of views. The collaboration is flawless and the process simple.\u201D",
+                testi1_role: "Business Owner, Athens",
+                testi2_text: "\u201CThe technical coverage and live streaming at our corporate event were flawless. Excellent sound quality, immediate lighting management, and the final material was delivered instantly.\u201D",
                 testi2_name: "Maria Konstantinou",
-                testi2_role: "E-shop founder, Athens",
-                testi3_text: "\u201CWhat I appreciated most is that they don't care only about likes — they care about bringing customers. And they deliver.\u201D",
+                testi2_role: "Corporate Events Manager",
+                testi3_text: "\u201CWhat we appreciated most was the attention to detail. The sound design elevated our production to another level.\u201D",
                 testi3_name: "Dimitris Vasileiou",
-                testi3_role: "Gym manager, Athens",
+                testi3_role: "Marketing Director",
                 faq_title: "FAQ",
-                faq1_q: "How much does a partnership cost?",
-                faq1_a: "Every business is different. Cost depends on the number of videos and platforms you want us to cover. Contact us for a quote tailored to your needs.",
+                faq1_q: "How much does a production cost?",
+                faq1_a: "Costs are shaped based on project requirements. It depends on equipment, venue rental, filming days, and post-production needs. Contact us for a precise quote.",
                 faq2_q: "Which areas do you serve?",
-                faq2_a: "We operate in Athens. For filming we come to your location, while planning, editing and management are done remotely.",
-                faq3_q: "How many new customers will you bring?",
-                faq3_a: "We can't guarantee specific numbers — no honest professional can. What we do guarantee is consistent, quality production and a data-driven strategy that maximizes the chances of organic growth.",
-                faq4_q: "Do I need existing social media accounts?",
-                faq4_a: "Not necessarily. If you have no presence yet, we also handle creating and setting up your accounts from scratch.",
-                faq5_q: "Is there a minimum commitment period?",
-                faq5_a: "We recommend at least three months, because algorithms need time to pay off. That said, we can agree flexible terms case by case.",
+                faq2_a: "We operate in Athens, handling technical coverage in exhibition centers, corporate offices, or external venues.",
+                faq3_q: "Do you only handle filming?",
+                faq3_a: "We cover the entire spectrum (full-stack). From a simple promo video to multi-camera event coverage with live directing, multi-platform live streaming, lighting design, and final editing.",
+                faq4_q: "Do you provide the necessary equipment?",
+                faq4_a: "Yes. We supply professional cameras, wireless audio systems, lights, and editing tools to fully cover the needs of the set.",
+                faq5_q: "How long does delivery take?",
+                faq5_a: "Delivery time is determined during the pre-production stage. It depends on the volume of material and the complexity of video editing and color grading.",
                 contact_title: "Contact",
-                contact_p: "Ready to upgrade your business's digital presence? Get in touch with us directly.",
+                contact_p: "Ready to organize your next production? Get in touch with us directly.",
                 mobile_cta: "Contact",
                 footer_rights: "All rights reserved."
             },
-            el: null // original Greek text stays in the DOM as the default
+            el: null 
         };
 
         function applyLang(lang) {
             if (lang === 'el') {
-                // restore original Greek from stored snapshot
                 document.querySelectorAll('[data-i18n]').forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (EL_SNAPSHOT[key] !== undefined) el.textContent = EL_SNAPSHOT[key];
@@ -1050,7 +1048,6 @@
             currentLang = lang;
         }
 
-        // Snapshot of original Greek strings before any translation runs
         const EL_SNAPSHOT = { _title: document.title, _desc: document.querySelector('meta[name="description"]').getAttribute('content') };
         document.querySelectorAll('[data-i18n]').forEach(el => {
             EL_SNAPSHOT[el.getAttribute('data-i18n')] = el.textContent;
@@ -1093,7 +1090,6 @@
                 const answer = item.querySelector('.faq-a');
                 const isOpen = item.classList.contains('open');
 
-                // close all
                 document.querySelectorAll('.faq-item.open').forEach(other => {
                     other.classList.remove('open');
                     other.querySelector('.faq-a').style.maxHeight = null;
